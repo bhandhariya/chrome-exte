@@ -5,6 +5,9 @@ import { Temp2Component } from "./templates/temp2/temp2.component";
 import { Temp3Component } from "./templates/temp3/temp3.component";
 import { Temp4Component } from "./templates/temp4/temp4.component";
 
+declare const chrome;
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,7 +17,9 @@ export class AppComponent {
   title = 'chromeext1';
   constructor(public dialog: MatDialog) {}
   template1(){
-    this.dialog.open(Temp1Component)
+    this.dialog.open(Temp1Component).afterClosed().subscribe(result=>{
+      console.log(result);
+    })
   }
   template2(){
     this.dialog.open(Temp2Component)
@@ -23,6 +28,12 @@ export class AppComponent {
     this.dialog.open(Temp3Component)
   }
   template4(){
+    // chrome.browser.openTab;
+    alert('raja saini')
     this.dialog.open(Temp4Component)
+  }
+
+  testmessage(){
+    
   }
 }

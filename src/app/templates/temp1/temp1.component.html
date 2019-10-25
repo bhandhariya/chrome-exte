@@ -3,14 +3,12 @@
         Template 1
     </div>
     <div class="card-body">
-        <h4 class="card-title">Title</h4>
+        <h4 class="card-title">{{temp1.title}}</h4>
         <p class="card-text">
-            ActiveCampaign is a full-service ESP that provides sending services, marketing automation, email templates and an email designer tool. You can access their free template library after creating an account.
-
-To find their templates once logged in, click on the Campaigns tab, then on “Email Templates” on the right side of the screen. Their library includes 52 email templates that range in complexity and design.
+           {{temp1.body}}
         </p>
     </div>
     <div class="card-footer text-muted">
-        <input name="" id="" class="btn btn-primary" type="button" value="Select">
+        <input name="" id="" class="btn btn-primary" type="button" value="Select"  (click)="save()" >
     </div>
 </div>
