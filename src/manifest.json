@@ -1,7 +1,7 @@
 {
-    "name": "Getting Started Example",
+    "name": "Pizone",
     "version": "1.0",
-    "description": "Build an Extension!",
+    "description": "Gmail Templated!",
     "manifest_version": 2,
     "browser_action":{
         "default_popup":"index.html"
@@ -10,9 +10,22 @@
         "activeTab",
         "webNavigation",
         "storage",
-        "tabs"
+        "tabs",
+        "https://mail.google.com/",
+        "https://inbox.google.com/",
+        "https://api.pipl.com/",
+        "https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js",
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
     ],
+    "content_scripts" : [
+        {
+          "matches": ["https://mail.google.com/*", "https://inbox.google.com/*"],
+          "js": ["assets/inboxsdk.js", "assets/app.js","assets/angular.min.js"]
+        }
+      ],
     "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'",
-    "web_accessible_resources":["*.jpg"]
+    "web_accessible_resources":["*.jpg","*.png","*.ico"],
+    "icons": {"128": "favicon.ico"}
 }
   
