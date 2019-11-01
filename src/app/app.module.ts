@@ -9,6 +9,10 @@ import { Temp1Component } from './templates/temp1/temp1.component';
 import { Temp2Component } from './templates/temp2/temp2.component';
 import { Temp3Component } from './templates/temp3/temp3.component';
 import { Temp4Component } from './templates/temp4/temp4.component';
+import { AllTemplatesComponent } from './all-templates/all-templates.component';
+import { CreateTemplatesComponent } from './create-templates/create-templates.component';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,12 +20,14 @@ import { Temp4Component } from './templates/temp4/temp4.component';
     Temp1Component,
     Temp2Component,
     Temp3Component,
-    Temp4Component
+    Temp4Component,
+    AllTemplatesComponent,
+    CreateTemplatesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NoopAnimationsModule,MatDialogModule
+    AppRoutingModule,FormsModule,ReactiveFormsModule,
+    NoopAnimationsModule,MatDialogModule,HttpClientModule
   ],
   entryComponents:[Temp1Component,Temp2Component,
     Temp3Component,

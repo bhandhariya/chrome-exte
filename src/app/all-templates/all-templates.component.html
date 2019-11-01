@@ -1,0 +1,20 @@
+<table class="table" *ngIf="Data" >
+    <thead>
+        <tr>
+            <th>S.N.</th>
+            <th>Name</th>
+            <th>Template</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of Data;let j=index" >
+            <td scope="row">{{j+1}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.template}}</td>
+            <td>
+                <button class="btn btn-danger" >Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

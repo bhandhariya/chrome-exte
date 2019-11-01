@@ -1,0 +1,16 @@
+<div class="container">
+	<div class="row">
+    <div class="col-md-4">
+		<div class="form_main">
+                <h4 class="heading"><strong>Quick </strong> Template Creation <span></span></h4>
+                <div class="form">
+                <form [formGroup]="templateForm"  id="contactFrm" >
+                    <input type="text" required="" formControlName="name" placeholder="Please input your Name"  class="txt">
+                	 <textarea placeholder="Your Message" formControlName="template"  type="text" class="txt_3"></textarea>
+                     <input type="submit" value="submit" (click)="templateFormSubmit(templateForm.value)"  class="txt2">
+                </form>
+            </div>
+            </div>
+        </div>
+	</div>
+</div>
