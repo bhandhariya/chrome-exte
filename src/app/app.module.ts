@@ -13,6 +13,7 @@ import { AllTemplatesComponent } from './all-templates/all-templates.component';
 import { CreateTemplatesComponent } from './create-templates/create-templates.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule,ReactiveFormsModule } from "@angular/forms";
     Temp3Component,
     Temp4Component,
     AllTemplatesComponent,
-    CreateTemplatesComponent
+    CreateTemplatesComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
